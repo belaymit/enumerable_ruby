@@ -1,38 +1,5 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -60,58 +27,33 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 enumerable_ruby <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**enumerable_ruby** is an educational project that is aimed to achieve the following objectives
+-  Use Ruby syntax for basic programming operations.
+-   Apply Ruby best practices and language style guides in code.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
   </ul>
 </details>
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://google.com)
+- **Lists**
+- **Modules**
+- **Enumerables**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,103 +61,126 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
-
 ### Prerequisites
 
 In order to run this project you need:
 
-<!--
-Example command:
+#### Select your platform
+ - MacOS
+ -  Ubuntu
+ -  Windows
+
+### Tools on Unix based systems
+
+There are several tools that can be used to install Ruby on your local machine. The most popular are:
+```sh
+   rbenv
+   RVM
+   asdf
+```
+We will go with rbenv because it does not override any of the system shell scripts like RVM and it allows us to compile older Ruby versions that will fail with RVM.
+
+## MacOS
+
+Run the following commands in your terminal:
+```sh
+brew install rbenv ruby-build
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+source ~/.bash_profile
+rbenv install 3.0.1
+rbenv global 3.0.1
+ruby -v
+```
+> Note: If you are using a shell other than bash, for example zsh, you should change the first line to use zshrc like this:
+```sh
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.zshrc
+```
+> or any other config file of your shell.
+
+## Ubuntu
+
+> You can install Ruby on Ubuntu in several ways. The easiest way is to run the following command (source):
+```sh
+  sudo apt-get install ruby-full
+```
+If that doesn't work, you can try installing Ruby using [rbenv](https://github.com/rbenv/rbenv). This is a version manager tool for the Ruby programming language on Unix-like systems.
+
+Run the following commands in your terminal:
 
 ```sh
- gem install rails
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+exec $SHELL
+
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+exec $SHELL
+
+rbenv install 3.0.1
+rbenv global 3.0.1
+ruby -v
 ```
- -->
+consider checking [ Install ruby on Ubuntu 20.04 with rbenv.](https://linuxtut.com/install-ruby-on-ubuntu-20.04-with-rbenv-e419f/)
+
+## Windows
+Installing Ruby on Windows is a little more difficult than installing it on another OS. We would recommend using [WSL](https://learn.microsoft.com/en-us/windows/wsl/about), but you can also try to install Ruby directly on your OS with [rubyinstaller](https://rubyinstaller.org/).
+
+```sh
+WSL only works on 64-bit installations of Windows.
+```
+
+If you are using a 64-bit version of Windows 10, we recommend following [this](https://gorails.com/setup/windows/10) article to install Ruby.
+
+If you can not use WSL then you should follow these steps:
+
+> Download the last version of [RubyInstaller](https://rubyinstaller.org/downloads/).
+> Run RubyInstaller and follow the steps described [here](https://stackify.com/install-ruby-on-windows-everything-you-need-to-get-going/).
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com:belaymit/enumerable_ruby.git
 ```
---->
+
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
 
 ```sh
-  cd my-project
+  cd enumerable_ruby
   gem install
 ```
---->
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
-  rails server
+  ruby file-name.rb
 ```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+👤 **Belay Birhanu G**
 
-> Mention all of the collaborators of this project.
+- GitHub: [@githubhandle](https://github.com/belaymit)
+- Twitter: [@twitterhandle](https://twitter.com/2belamit)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/belay-birhanu-144ba714b/)
 
-👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Jules Edozie**
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/julzedz)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jules-edozie-b59b94234/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -223,11 +188,11 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Test Cases**
+- [ ] **Min**
+- [ ] **Max**
+- [ ] **Sort**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -237,7 +202,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/belaymit/enumerable_ruby/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,9 +210,8 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project please give it a star
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -255,9 +219,7 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+We would like to thank Microverse Community
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -265,15 +227,66 @@ I would like to thank...
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- **What is Enumerable in Ruby?**
 
-  - [Answer_1]
+  - The Enumerable mixin provides collection classes with several traversal and searching methods, and with the ability to sort. The class must provide a method ```#each```, which yields successive members of the collection. If ```Enumerable#max```, ```#min```, or ```#sort``` is used, the objects in the collection must also implement a meaningful ```<=>``` operator, as these methods rely on an ordering between members of the collection.
 
-- **[Question_2]**
+  - ```Enumerable``` is a very important module. It is Ruby’s way for performing almost any cycle. The module is included in collections, like ```Array``` and ```Hash```  and some other classes (like ```Range```).
+  ## Examples
+```sh numbers = [1, 2, 8, 9, 18, 7]
+numbers.each { |n| puts n }       # prints each number
+numbers.map { |n| n**2 }          #=> [1, 4, 64, 81, 324, 49]
+numbers.select { |n| n.odd? }     #=> [1, 9, 7]
+numbers.reject { |n| n.odd? }     #=> [2, 8, 18]
+numbers.partition { |n| n.odd? }  #=> [[1, 9, 7], [2, 8, 18]]
+numbers.sort                      #=> [1, 2, 7, 8, 9, 18]
+numbers.take_while { |n| n < 9 }  #=> [1, 2, 8]
+numbers.drop_while { |n| n < 9 }  #=> [9, 18, 7]
+(1..10).select { |n| n.odd? }   #=> [1, 3, 5, 7, 9]
+```
+- Also, many Ruby classes that are not ```Enumerable``` by themselves (like ```String```) provide methods which return ```Enumerator``` (see below), which is also ```Enumerable```, and can be processed in the same manner:
+```sh
+"test".each_char                          #=> #<Enumerator: "test":each_char>
+"test".each_char.select { |c| c < 't' }   #=> ["e", "s"]
+"test".each_char.sort                     #=> ["e", "s", "t", "t"]
+```
 
-  - [Answer_2]
+- **What is Enumerator in Ruby?**
+
+  - A class which allows both internal and external iteration.
+  - An Enumerator can be created by the following methods.
+    - ``Object#to_enum``
+    - ``Object#enum_for``
+    - ``Enumerator.new``
+- Most methods have two forms: a block form where the contents are evaluated for each item in the enumeration, and a non-block form which returns a new Enumerator wrapping the iteration.
+```sh
+enumerator = %w(one two three).each
+puts enumerator.class # => Enumerator
+
+enumerator.each_with_object("foo") do |item, obj|
+  puts "#{obj}: #{item}"
+end
+
+```
+```sh
+enum_with_obj = enumerator.each_with_object("foo")
+puts enum_with_obj.class # => Enumerator
+
+enum_with_obj.each do |item, obj|
+  puts "#{obj}: #{item}"
+end
+```
+- This allows you to chain Enumerators together. For example, you can map a list’s elements to strings containing the index and the element as a string via:
+```puts %w[foo bar baz].map.with_index { |w, i| "#{i}:#{w}" }```
+- An Enumerator can also be used as an external iterator. For example, ``Enumerator#next`` returns the next value of the iterator or raises StopIteration if the Enumerator is at the end.
+
+
+``e = [1,2,3].each   # returns an enumerator object.``
+```puts e.next   # => 1```
+```puts e.next   # => 2```
+``puts e.next   # => 3``
+``puts e.next   # raises StopIteration``
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -281,8 +294,8 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
