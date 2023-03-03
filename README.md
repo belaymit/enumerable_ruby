@@ -1,5 +1,7 @@
 <a name="readme-top"></a>
 
+<img src="./images/images.jpeg" width="200" align-item="center" alt="Ruby for all">
+<h1>Ruby Enumerable</h1>
 
 <!-- TABLE OF CONTENTS -->
 
